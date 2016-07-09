@@ -1,5 +1,5 @@
 .nested-fields
   .field
-    .editable data-paragraph='false' data-name="page[blocks_attributes][#{f.index}][content]" data-value="#{f.object.content}"
+    .editable data-name="page[blocks_attributes][#{f.index}][content]" data-value="#{f.object.content}"
     = f.hidden_field :content
   = link_to_remove_association "remove block", f

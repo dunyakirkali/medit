@@ -7,13 +7,12 @@ class @Editor
     });
 
     $('.editable').each ->
-      value = $(this).data('value')
-      $(this).text(value)
+      data = $(this).data()
+      if data['paragraph'] != false then $(this).html(data['value']) else $(this).text(data['value'])
 
   save: ->
     $('.editable').each ->
       data = $(this).data()
-      value = $(this).html()
       name = $(this).data('name')
       if data['paragraph'] != false then value = $(this).html() else value = $(this).text()
       $("input[name='#{name}']").val(value) if name
