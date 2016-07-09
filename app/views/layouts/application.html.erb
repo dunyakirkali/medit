@@ -17,6 +17,10 @@
       <% else %>
         <%= link_to 'Backend', admin_pages_path %>
       <% end %>
+      <%= link_to 'sign_out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'sign_in', new_user_session_path %>
+      <%= link_to 'sign_up', new_user_registration_path %>
     <% end %>
     <%= yield %>
   </body>
