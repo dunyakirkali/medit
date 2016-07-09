@@ -9,7 +9,6 @@
           li = message
 
   .field.editable data-target='page[title]' data-paragraph="false"
-  .field.editable data-target='page[content]'
   #blocks
     = f.fields_for :blocks do |block|
       = render 'block_fields', f: block
@@ -18,6 +17,5 @@
 
   .field
     = f.hidden_field :title
-    = f.hidden_field :content
   .actions
     = f.submit
