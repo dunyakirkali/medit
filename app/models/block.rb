@@ -1,3 +1,4 @@
 class Block < ApplicationRecord
-  belongs_to :imageable
+  has_many :connections
+  has_many :pages, through: :connections
 end
