@@ -8,14 +8,13 @@
         - page.errors.full_messages.each do |message|
           li = message
 
-  h2.editable data-target='page[title]' data-paragraph=false
   #blocks
     = f.fields_for :blocks do |block|
       = render 'block_fields', f: block
     .links
       = link_to_add_association 'add block', f, :blocks
 
-  .field
+  h2
     = f.label :title, class: 'editable'
     = f.hidden_field :title
   .actions
