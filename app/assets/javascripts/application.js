@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require medium-editor
 //= require cocoon
 //= require_tree .
@@ -28,3 +29,5 @@ $(document).ready(function(){
     editor = new Editor;
   });
 });
+
+$(function(){ $(document).foundation(); });
