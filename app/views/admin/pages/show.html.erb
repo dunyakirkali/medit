@@ -1,6 +1,6 @@
 <h2><%= @page.title %></h2>
 <% @page.blocks.each do |block| %>
-  <%= block.content %>
+  <%== block.content %>
 <% end %>
 </br>
 <%= link_to 'Edit', edit_admin_page_path(@page) %> |
