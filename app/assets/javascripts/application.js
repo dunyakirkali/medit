@@ -18,7 +18,7 @@
 
 $(document).ready(function(){
 
-  var editor = new MediumEditor('.editor', {
+  var editor = new MediumEditor('.editable', {
     // options go here
   });
 });
