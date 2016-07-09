@@ -18,6 +18,10 @@
 //= require_tree .
 
 $(document).ready(function(){
+  editor = new Editor;
 
-  var editor = new MediumEditor('.editable');
+  $('input[type="submit"]').on('click', function(e){
+    e.preventDefault();
+    editor.save()
+  })
 });
