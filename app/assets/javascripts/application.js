@@ -20,7 +20,7 @@
 $(document).ready(function(){
   editor = new Editor;
 
-  $('body').on('click', 'input[type="submit"]', function(e){
+  $('.edit_page, .new_page').on('click', 'input[type="submit"]', function(e){
     e.preventDefault();
     editor.save()
   })
