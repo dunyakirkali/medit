@@ -21,7 +21,15 @@
     <%= f.text_area :content %>
   </div>
 
-  <div class="editable"> Edit here</div>
+  <h3>Blocks</h3>
+  <div id='blocks'>
+    <%= f.fields_for :blocks do |block| %>
+      <%= render 'block_fields', f: block %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add block', f, :blocks %>
+    </div>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
