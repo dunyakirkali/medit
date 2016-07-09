@@ -10,6 +10,11 @@
 
   .field.editable data-target='page[title]' data-paragraph="false"
   .field.editable data-target='page[content]'
+  #blocks
+    = f.fields_for :blocks do |block|
+      = render 'block_fields', f: block
+    .links
+      = link_to_add_association 'add block', f, :blocks
 
   .field
     = f.hidden_field :title
