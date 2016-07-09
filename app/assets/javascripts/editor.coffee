@@ -8,7 +8,7 @@ class @Editor
     $('.editable').each ->
       data = $(this).data()
       value = $(this).html()
-      target = $(this).attr('for')
+      name = $(this).data('name')
       if data['paragraph'] != false then value = $(this).html() else value = $(this).text()
-      $("##{target}").val(value) if target
+      $("input[name='#{name}']").val(value) if name
       $(this).closest('form').submit()
