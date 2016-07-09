@@ -16,6 +16,7 @@
       = link_to_add_association 'add block', f, :blocks
 
   .field
+    = f.label :title, class: 'editable'
     = f.hidden_field :title
   .actions
     = f.submit
