@@ -23,4 +23,8 @@ $(document).ready(function(){
     e.preventDefault();
     editor.save()
   })
+
+  $('#blocks').on('cocoon:after-insert', function() {
+    editor = new Editor;
+  });
 });
