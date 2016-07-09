@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require medium-editor
 //= require_tree .
+
+$(document).ready(function(){
+
+  var editor = new MediumEditor('.editor', {
+    // options go here
+  });
+});
