@@ -11,4 +11,4 @@ class @Editor
       target = $(this).attr('for')
       if data['paragraph'] != false then value = $(this).html() else value = $(this).text()
       $("##{target}").val(value) if target
-      $(this).parent('form').submit()
+      $(this).closest('form').submit()

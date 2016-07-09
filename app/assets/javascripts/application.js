@@ -19,7 +19,7 @@
 $(document).ready(function(){
   editor = new Editor;
 
-  $('input[type="submit"]').on('click', function(e){
+  $('body').on('click', 'input[type="submit"]', function(e){
     e.preventDefault();
     editor.save()
   })
