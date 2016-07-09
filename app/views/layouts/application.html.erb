@@ -11,12 +11,12 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <% if controller_path == 'admin/pages' %>
+      <%= link_to 'Frontend', pages_path %>
+    <% else %>
+      <%= link_to 'Backend', admin_pages_path %>
+    <% end %>
     <% if user_signed_in? %>
-      <% if controller_path == 'admin/pages' %>
-        <%= link_to 'Frontend', pages_path %>
-      <% else %>
-        <%= link_to 'Backend', admin_pages_path %>
-      <% end %>
       <%= link_to 'sign_out', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'sign_in', new_user_session_path %>

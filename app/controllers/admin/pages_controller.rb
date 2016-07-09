@@ -1,5 +1,6 @@
 class Admin::PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /admin/pages
   def index
@@ -51,6 +52,6 @@ class Admin::PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:page).permit(:title, :content, blocks_attributes: [:id, :_destroy])
+    params.require(:page).permit(:title, :content, blocks_attributes: [:id, :content, :_destroy])
   end
 end
