@@ -7,7 +7,7 @@
       ul
         - page.errors.full_messages.each do |message|
           li = message
-  h2.editable data-paragraph='false' data-name='page[title]'
+  h2.editable data-paragraph='false' data-name='page[title]' data-value="#{page.title}"
     = f.hidden_field :title
   #blocks
     = f.fields_for :blocks do |block, index|

@@ -2,7 +2,13 @@ class @Editor
   @options
   @editor
   constructor: (options = {}) ->
-    @editor = new MediumEditor('.editable');
+    @editor = new MediumEditor('.editable', {
+      placeholder: false
+    });
+
+    $('.editable').each ->
+      value = $(this).data('value')
+      $(this).text(value)
 
   save: ->
     $('.editable').each ->
