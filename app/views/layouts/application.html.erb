@@ -12,7 +12,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if user_signed_in? %>
-      <% if controller_name == 'admin/pages' %>
+      <% if controller_path == 'admin/pages' %>
         <%= link_to 'Frontend', pages_path %>
       <% else %>
         <%= link_to 'Backend', admin_pages_path %>
